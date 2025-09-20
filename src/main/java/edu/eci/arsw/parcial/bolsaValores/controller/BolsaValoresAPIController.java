@@ -27,7 +27,6 @@ public class BolsaValoresAPIController {
     public ResponseEntity<?> getInfo(@PathVariable FunctionType function, @PathVariable String symbol) {
         try {
             TimeSeries informacion = bolsaValoresServices.getInformation(function, symbol);
-            Set<TimeSeries> request.get(${apikey})
             return new ResponseEntity<>(informacion, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             return new ResponseEntity<>("Error retrieving blueprints", HttpStatus.NOT_FOUND);
