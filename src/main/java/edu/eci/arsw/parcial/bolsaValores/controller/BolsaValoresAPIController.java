@@ -29,7 +29,7 @@ public class BolsaValoresAPIController {
             TimeSeries informacion = bolsaValoresServices.getInformation(function, symbol);
             return new ResponseEntity<>(informacion, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
-            return new ResponseEntity<>("Error retrieving blueprints", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Error searching values", HttpStatus.NOT_FOUND);
         }
     }
 }
